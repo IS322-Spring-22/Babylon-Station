@@ -33,7 +33,7 @@ export default function App() {
                 <a className={`nav-link ${(currentPage === "About"? "active": "")}`} href="/about">About</a>
               </li>
               <li className="nav-item">
-                <a className={`nav-link ${(currentPage === "Account"? "active": "")}`} href="/profile">Account</a>
+                <a className={`nav-link ${(currentPage === "Account"? "active": "")}`} href="/account">Account</a>
               </li>
             </ul>
           </div>
@@ -43,7 +43,7 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Home setCurrentPage={setCurrentPage}/>}/>
           <Route path='/about' element={<About setCurrentPage={setCurrentPage}/>}/>
-          <Route path='/profile' element={<Profile setCurrentPage={setCurrentPage}/>}/>
+          <Route path='/account' element={<Profile setCurrentPage={setCurrentPage}/>}/>
           <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </Router>
