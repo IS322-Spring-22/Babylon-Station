@@ -10,6 +10,7 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Profile from "./pages/profile";
 import ErrorPage from "./pages/ErrorPage";
+import Translate from "./pages/translate";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -33,6 +34,9 @@ export default function App() {
                 <a className={`nav-link ${(currentPage === "About"? "active": "")}`} href="/about">About</a>
               </li>
               <li className="nav-item">
+              <a className={`nav-link ${(currentPage === "Translate"? "active": "")}`} href="/translate">Translate</a>
+              </li>
+              <li className="nav-item">
                 <a className={`nav-link ${(currentPage === "Account"? "active": "")}`} href="/account">Account</a>
               </li>
             </ul>
@@ -44,6 +48,7 @@ export default function App() {
           <Route path='/' element={<Home setCurrentPage={setCurrentPage}/>}/>
           <Route path='/about' element={<About setCurrentPage={setCurrentPage}/>}/>
           <Route path='/account' element={<Profile setCurrentPage={setCurrentPage}/>}/>
+          <Route path='/translate' element={<Translate setCurrentPage={setCurrentPage}/>}/>
           <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </Router>
